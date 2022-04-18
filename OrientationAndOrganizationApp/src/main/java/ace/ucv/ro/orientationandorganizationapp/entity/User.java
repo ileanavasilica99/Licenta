@@ -1,6 +1,6 @@
-package ace.ucv.ro.orientationandorganizationapp.model;
+package ace.ucv.ro.orientationandorganizationapp.entity;
 
-import ace.ucv.ro.orientationandorganizationapp.model.enums.Gender;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Gender;
 
 import javax.persistence.*;
 import javax.persistence.InheritanceType;

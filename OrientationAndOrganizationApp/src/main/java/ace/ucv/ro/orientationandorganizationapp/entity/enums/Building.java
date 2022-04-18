@@ -1,4 +1,4 @@
-package ace.ucv.ro.orientationandorganizationapp.model.enums;
+package ace.ucv.ro.orientationandorganizationapp.entity.enums;
 
 public enum Building {
     AUTOMATICA_SI_CALCULATOARE,

@@ -1,6 +1,6 @@
-package ace.ucv.ro.orientationandorganizationapp.model;
+package ace.ucv.ro.orientationandorganizationapp.entity;
 
-import ace.ucv.ro.orientationandorganizationapp.model.enums.ExaminationType;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.ExaminationType;
 
 import javax.persistence.*;
 

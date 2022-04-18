@@ -1,6 +1,6 @@
-package ace.ucv.ro.orientationandorganizationapp.model;
+package ace.ucv.ro.orientationandorganizationapp.entity;
 
-import ace.ucv.ro.orientationandorganizationapp.model.enums.SubjectType;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.SubjectType;
 
 import javax.persistence.*;
 import java.time.DayOfWeek;

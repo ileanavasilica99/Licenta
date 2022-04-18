@@ -1,9 +1,9 @@
-package ace.ucv.ro.orientationandorganizationapp.model;
+package ace.ucv.ro.orientationandorganizationapp.entity;
 
-import ace.ucv.ro.orientationandorganizationapp.model.enums.Building;
-import ace.ucv.ro.orientationandorganizationapp.model.enums.ClassroomType;
-import ace.ucv.ro.orientationandorganizationapp.model.enums.Faculty;
-import ace.ucv.ro.orientationandorganizationapp.model.enums.StudyProgramServed;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Building;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.ClassroomType;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Faculty;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.StudyProgramServed;
 
 import javax.persistence.*;
 

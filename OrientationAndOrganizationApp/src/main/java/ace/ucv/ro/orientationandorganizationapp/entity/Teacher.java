@@ -1,7 +1,7 @@
-package ace.ucv.ro.orientationandorganizationapp.model;
+package ace.ucv.ro.orientationandorganizationapp.entity;
 
 
-import ace.ucv.ro.orientationandorganizationapp.model.enums.Department;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Department;
 
 import javax.persistence.*;
 
