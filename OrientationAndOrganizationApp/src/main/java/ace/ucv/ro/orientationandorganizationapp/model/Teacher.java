@@ -6,7 +6,7 @@ import ace.ucv.ro.orientationandorganizationapp.model.enums.Department;
 import javax.persistence.*;
 
 @Entity(name = "teacher")
-public class Teacher extends Person {
+public class Teacher {
     @Id
     private Long id;
 

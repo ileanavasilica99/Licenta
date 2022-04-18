@@ -3,12 +3,13 @@ package ace.ucv.ro.orientationandorganizationapp.model;
 import ace.ucv.ro.orientationandorganizationapp.model.enums.Gender;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
+import javax.persistence.InheritanceType;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
-@Entity(name = "person")
+@Entity(name = "user")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Person {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -45,5 +46,4 @@ public class Person {
     @Column(nullable = false)
     @Email
     private String personalEmail;
-
 }

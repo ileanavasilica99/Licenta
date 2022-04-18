@@ -2,23 +2,25 @@ package ace.ucv.ro.orientationandorganizationapp.model;
 
 
 import ace.ucv.ro.orientationandorganizationapp.model.enums.CivilStatus;
+import ace.ucv.ro.orientationandorganizationapp.model.enums.EducationCycle;
 import ace.ucv.ro.orientationandorganizationapp.model.enums.Gender;
 import ace.ucv.ro.orientationandorganizationapp.model.enums.StudyProgram;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "student")
-public class Student extends Person{
+public class Student extends User{
     @Id
     private Long id;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private StudyProgram studyProgram;
+    //BACHELOR,MASTER,DOCTORAL
+    private EducationCycle educationCycle;
 
     @Column(nullable = false)
-    private String specialization;
+    //AIA, CEN, CR, ISM, MCT, ROB, ELA
+    private StudyProgram studyProgram;
 
     @Column(nullable = false)
     private int studyYear;
@@ -26,9 +28,6 @@ public class Student extends Person{
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private CivilStatus civilStatus;
-
-//    @ElementCollection
-//    private List<String> legalSupporters;
 
     @Column(nullable = false)
     private Boolean orphan;

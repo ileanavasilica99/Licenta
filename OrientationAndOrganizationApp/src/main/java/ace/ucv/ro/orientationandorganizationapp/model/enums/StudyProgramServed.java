@@ -1,11 +1,11 @@
 package ace.ucv.ro.orientationandorganizationapp.model.enums;
 
-public enum StudyProgram {
+public enum StudyProgramServed {
     AIA,
-    CR,
-    CEN,
+    CALCULATOARE,
     ELA,
     ISM,
     MCT,
-    ROB
+    ROB,
+    ALL
 }
