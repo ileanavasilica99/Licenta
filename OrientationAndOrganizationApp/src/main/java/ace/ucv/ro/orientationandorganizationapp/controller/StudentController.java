@@ -1,4 +1,4 @@
-package ace.ucv.ro.orientationandorganizationapp.entity.controller;
+package ace.ucv.ro.orientationandorganizationapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
