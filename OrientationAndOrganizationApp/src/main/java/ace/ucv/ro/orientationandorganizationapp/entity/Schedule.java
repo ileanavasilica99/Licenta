@@ -1,40 +1,41 @@
 package ace.ucv.ro.orientationandorganizationapp.entity;
 
-import ace.ucv.ro.orientationandorganizationapp.entity.enums.SubjectType;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
 @Entity(name = "schedule")
-public class Schedule {
+@Data @NoArgsConstructor
+public class Schedule implements Comparable<Schedule> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private DayOfWeek dayOfWeek;
+    @Column(name = "start_hour", columnDefinition = "TIME")
+    private LocalTime startHour;
 
-    private LocalTime startTime;
-
-    private LocalTime endTime;
-
-    @Column(name = "year_group")
-    private String group;
-
-    private String subgroup;
-
-    @OneToOne
-    @JoinColumn(name = "subject_name")
-    private Subject subject;
+    @Column(name = "end_hour", columnDefinition = "TIME")
+    private LocalTime endHour;
 
     @Enumerated(EnumType.STRING)
-    private SubjectType type;
+    private DayOfWeek day;
 
-    private String teacherName;
-
-    @OneToOne
-    @JoinColumn(name = "classroom_name")
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Classroom classroom;
+
+    @Override
+    public int compareTo(Schedule schedule) {
+        return this.startHour.compareTo(schedule.startHour);
+    }
+
+    public Schedule(LocalTime startHour, LocalTime endHour, DayOfWeek day, Classroom classroom) {
+        this.startHour = startHour;
+        this.endHour = endHour;
+        this.day = day;
+        this.classroom = classroom;
+    }
 }

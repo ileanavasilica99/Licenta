@@ -1,39 +1,43 @@
 package ace.ucv.ro.orientationandorganizationapp.entity;
 
 
-import ace.ucv.ro.orientationandorganizationapp.entity.enums.CivilStatus;
-import ace.ucv.ro.orientationandorganizationapp.entity.enums.EducationCycle;
-import ace.ucv.ro.orientationandorganizationapp.entity.enums.StudyProgram;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Role;
+import ace.ucv.ro.orientationandorganizationapp.entity.enums.Specialization;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import java.time.LocalDate;
 
 @Entity(name = "student")
-@Data
-@AllArgsConstructor
+@Setter @Getter
 @NoArgsConstructor
 public class Student extends User{
-    @Id
-    private Long id;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    //BACHELOR,MASTER,DOCTORAL
-    private EducationCycle educationCycle;
-
-    @Column(nullable = false)
-    //AIA, CEN, CR, ISM, MCT, ROB, ELA
-    private StudyProgram studyProgram;
+    private Specialization specialization;
 
     @Column(nullable = false)
     private int studyYear;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private CivilStatus civilStatus;
+    private String studentGroup;
 
     @Column(nullable = false)
-    private Boolean orphan;
+    private String studentSubgroup;
+
+    public Student(String firstName, String lastName, String address, Long CNP, Long phoneNumber, String email,
+                   LocalDate dateOfBirth, Role role, Specialization specialization, int studyYear, String
+                           studentGroup, String studentSubgroup) {
+        super(firstName, lastName, address, CNP, phoneNumber, email, dateOfBirth, role);
+        this.specialization = specialization;
+        this.studyYear = studyYear;
+        this.studentGroup = studentGroup;
+        this.studentSubgroup = studentSubgroup;
+    }
 }

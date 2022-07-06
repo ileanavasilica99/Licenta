@@ -1,7 +1,7 @@
 package ace.ucv.ro.orientationandorganizationapp.entity.enums;
 
 public enum Faculty {
-    ACE,
-    UCV,
-    MECHANICS
+    AUTOMATICA_CALCULATOARE_SI_ELECTRONICA,
+    CLADIREA_CENTRALA_UCV,
+    MECANICA
 }

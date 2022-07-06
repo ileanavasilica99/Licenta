@@ -2,55 +2,40 @@
 <html lang="en">
     <head>
         <title>Login</title>
-        <meta charset="utf-8">
+        <meta charset = "ISO-8859-1" />
+        <link href="css/login.css" rel="stylesheet"/>
+        <script src="js/login.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="css/login.css" type="text/css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       </head>
 
-    <body style="background-color: #acbbc7; text-align:center">
-      <nav class="navbar fixed-top navbar-expand-sm navbar-light" style="background-color: #6196f4;">
-        <a href="#" class="navbar-brand mb-0 h1"> O&O App</a>
+    <body style="background-color: #e1d2b8; text-align:center">
 
-        <button
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav"
-        class="navbar-toggler"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <spam class="navbar-toggler-icon"></spam>
-        </button>
-
-        <div class="collapse navbar-collapse"  id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a href="student.html" class="nav-link">Student</a>
-            </li>
-            <li class="nav-item active">
-              <a href="teacher.html" class="nav-link">Teacher</a>
-            </li>
-            <li class="nav-item active">
-              <a href="admin.html" class="nav-link">Admin</a>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-lg" style="background-color: #9BBDF8;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">O&O App</a>
+          </div>
         </div>
       </nav>
 
         <div class="container-fluid bg">
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="image"><img src="images/ace_ucv_transparent.png" alt="Ace"> </div>
+                    <div class="image"><img src="images/ace_ucv_remove.png" alt="Ace Ucv"> </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <form class="form-container" style="text-align:left">
-                        <h1>Please insert your credentials</h1>
+                        <h1>Welcome to our website !</h1>
+                        <h2>Please insert your credentials</h2>
                         <div class="form-group">
-                          <label for="loginUsername">Username</label>
-                          <input type="text" class="form-control" id="loginUsername" placeholder="Username">
+                          <label for="loginUsername">Email</label>
+                          <input type="text" class="form-control" id="loginUsername" placeholder="Email">
                         </div>
                         <div class="form-group">
                           <label for="loginPassword">Password</label>
@@ -61,17 +46,16 @@
                             <input type="checkbox"> Remember me
                           </label>
                         </div>
-                        <button id="login" type="submit" class="btn btn-block">Login</button>
-                        <a href="register.html" class="btn button"> Register </a>
+                        <button id="login" type="submit" class="btn btn-block" onclick="validate()">Login</button>
                       </form>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                 <div class="image2"><img src="images/ucv_transparent.png" width="550"  alt="UCV"></div>
+                 <div class="image2"><img src="images/ucv_remove.png" width="514" alt=""></div>
                 </div>
             </div>
         </div>
 
-        <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50" style="background-color: #6196f4;">
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50" style="background-color: #9BBDF8;">
           <small>Created by &hearts; Ileana Vasilica 2022</small>
         </footer>
     </body>

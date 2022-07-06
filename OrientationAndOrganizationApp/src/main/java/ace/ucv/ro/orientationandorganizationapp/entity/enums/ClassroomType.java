@@ -1,7 +1,8 @@
 package ace.ucv.ro.orientationandorganizationapp.entity.enums;
 
 public enum ClassroomType {
-    LABORATORY,
+    INFORMATICS_LAB,
+    ELECTRONIC_LAB,
     COURSE,
     SEMINARY,
     AULA
